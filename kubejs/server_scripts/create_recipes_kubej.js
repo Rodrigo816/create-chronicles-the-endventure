@@ -59,6 +59,16 @@ ServerEvents.recipes((event) => {
       withChance('irons_spellbooks:uncommon_ink', 0.5)
     ], 'irons_spellbooks:scroll').processingTime(100)
 
+    event.recipes.createCrushing([
+        withChance(" garnished:crushed_salt", 1),
+        withChance(" create_aquatic_ambitions:calcium_rich_powder", 1),
+        withChance(" create_aquatic_ambitions:calcium_rich_powder", 0.5),
+        withChance(" create_aquatic_ambitions:suspicious_rock", 0.05),
+      ],
+      "create:limestone",
+    )
+    .processingTime(100);
+
 /*     event.custom({
       type: 'create:crushing',
       ingredients: [
